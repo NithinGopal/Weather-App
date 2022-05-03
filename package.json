@@ -19,5 +19,8 @@
   "homepage": "https://github.com/NithinGopal/Weather-App#readme",
   "devDependencies": {
     "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }
