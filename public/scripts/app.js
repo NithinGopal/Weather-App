@@ -65,4 +65,15 @@ cityForm.addEventListener('submit', e => {
     updateCity(city)
         .then(data => updateUI(data))  // to access data from updateCity promise
         .catch(err => console.log(err));
-})
+    
+    // set local storage 
+    localStorage.setItem('city', city)
+});
+
+// user automatically sees the last checked city data
+
+if(localStorage.getItem('city')) {
+    updateCity(localStorage.getItem('city'))   // it only returns a promise and you need to convert to data
+            .then(data => updateUI(data))  // then is used to convert a promise to data
+            .catch(err => console.log(err))  // to catch and log errors if any
+};
